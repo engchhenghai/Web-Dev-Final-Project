@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8BitMusicPlayer - Drums</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="initPianoRoll('drums')">
+  <header>
+    <h1>8BitMusicPlayer</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Main Menu</a></li>
+        <li><a href="drums.html">Drums</a></li>
+        <li><a href="guitar.html">Guitar</a></li>
+        <li><a href="piano.html">Piano</a></li>
+        <li><a href="bass.html">Bass</a></li>
+        <li><a href="mixer.html">Mixer</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="daw-top-bar">
+      <div class="daw-controls">
+        <button id="playBtn">Play</button>
+        <button id="clearBtn">Clear</button>
+      </div>
+      <div class="daw-status">
+        <label for="bpmSlider" id="bpmDisplay">BPM: 120</label>
+        <input type="range" id="bpmSlider" min="60" max="200" value="120">
+        | <span id="noteCount">0 Notes</span>
+      </div>
+      <div class="daw-controls">
+        <a href="guitar.html" class="btn">Next: Guitar &gt;</a>
+      </div>
+    </section>
+
+    <section class="daw-container">
+      <aside class="daw-sidebar">
+        <h2>Drums Track</h2>
+        <div class="sidebar-box">
+          <label for="quantizeSelect">Time Quantize</label>
+          <select id="quantizeSelect">
+            <option value="1">1/16 Step</option>
+            <option value="2">1/8 Step</option>
+            <option value="4">1/4 Note</option>
+          </select>
+        </div>
+        <div class="sidebar-box">
+          <p>Click cells to place drum hits.</p>
+        </div>
+      </aside>
+
+      <article class="piano-roll-area">
+        <div class="step-header">
+          <div>Kit</div>
+          <div>1</div><div>2</div><div>3</div><div>4</div>
+          <div>5</div><div>6</div><div>7</div><div>8</div>
+          <div>9</div><div>10</div><div>11</div><div>12</div>
+          <div>13</div><div>14</div><div>15</div><div>16</div>
+        </div>
+        <div id="pianoRollGrid" class="piano-roll-grid"></div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>INFO 250 Final Project - 8BitMusicPlayer Game</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

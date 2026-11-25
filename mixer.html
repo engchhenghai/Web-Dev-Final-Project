@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8BitMusicPlayer - Main Mixer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="initMixerPage()">
+  <header>
+    <h1>8BitMusicPlayer</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Main Menu</a></li>
+        <li><a href="drums.html">Drums</a></li>
+        <li><a href="guitar.html">Guitar</a></li>
+        <li><a href="piano.html">Piano</a></li>
+        <li><a href="bass.html">Bass</a></li>
+        <li><a href="mixer.html">Mixer</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="mixerArea">
+    <section class="daw-top-bar">
+      <h2 id="mixerTitle">Main Mixer</h2>
+      <div class="daw-status">
+        <label for="bpmSlider" id="bpmDisplay">BPM: 120</label>
+        <input type="range" id="bpmSlider" min="60" max="200" value="120">
+      </div>
+      <div class="daw-controls">
+        <button id="playAllBtn">Play All</button>
+      </div>
+    </section>
+
+    <section class="export-bar">
+      <h3>Save Your Song</h3>
+      <div class="daw-controls">
+        <label for="loopSelect">Repeat loop:</label>
+        <select id="loopSelect">
+          <option value="1">1 time</option>
+          <option value="2">2 times</option>
+          <option value="4" selected>4 times</option>
+          <option value="8">8 times</option>
+        </select>
+        <button id="exportBtn">Save as MP3</button>
+        <span id="exportMsg"></span>
+      </div>
+    </section>
+
+    <section class="mixer-tracks">
+      <article class="mixer-track-card">
+        <div class="mixer-track-header">
+          <h3>Drums</h3>
+          <div>
+            <label><input type="checkbox" id="mute-drums"> Mute</label>
+            <label>Vol: <input type="range" id="vol-drums" min="0" max="100" value="70"></label>
+            <a href="drums.html" class="btn">Edit</a>
+          </div>
+        </div>
+        <div id="mini-drums" class="mini-roll"></div>
+      </article>
+
+      <article class="mixer-track-card">
+        <div class="mixer-track-header">
+          <h3>Guitar</h3>
+          <div>
+            <label><input type="checkbox" id="mute-guitar"> Mute</label>
+            <label>Vol: <input type="range" id="vol-guitar" min="0" max="100" value="60"></label>
+            <a href="guitar.html" class="btn">Edit</a>
+          </div>
+        </div>
+        <div id="mini-guitar" class="mini-roll"></div>
+      </article>
+
+      <article class="mixer-track-card">
+        <div class="mixer-track-header">
+          <h3>Piano</h3>
+          <div>
+            <label><input type="checkbox" id="mute-piano"> Mute</label>
+            <label>Vol: <input type="range" id="vol-piano" min="0" max="100" value="65"></label>
+            <a href="piano.html" class="btn">Edit</a>
+          </div>
+        </div>
+        <div id="mini-piano" class="mini-roll"></div>
+      </article>
+
+      <article class="mixer-track-card">
+        <div class="mixer-track-header">
+          <h3>Bass Guitar</h3>
+          <div>
+            <label><input type="checkbox" id="mute-bass"> Mute</label>
+            <label>Vol: <input type="range" id="vol-bass" min="0" max="100" value="75"></label>
+            <a href="bass.html" class="btn">Edit</a>
+          </div>
+        </div>
+        <div id="mini-bass" class="mini-roll"></div>
+      </article>
+    </section>
+
+    <section>
+      <h3>Track Summary</h3>
+      <table class="track-table">
+        <thead>
+          <tr>
+            <th>Instrument</th>
+            <th>Notes Written</th>
+            <th>Role</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Drums</td>
+            <td id="count-drums">0</td>
+            <td>Rhythm</td>
+            <td><a href="drums.html">Open Roll</a></td>
+          </tr>
+          <tr>
+            <td>Guitar</td>
+            <td id="count-guitar">0</td>
+            <td>Chords</td>
+            <td><a href="guitar.html">Open Roll</a></td>
+          </tr>
+          <tr>
+            <td>Piano</td>
+            <td id="count-piano">0</td>
+            <td>Melody</td>
+            <td><a href="piano.html">Open Roll</a></td>
+          </tr>
+          <tr>
+            <td>Bass Guitar</td>
+            <td id="count-bass">0</td>
+            <td>Low End</td>
+            <td><a href="bass.html">Open Roll</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>INFO 250 Final Project - 8BitMusicPlayer Game</p>
+  </footer>
+
+  <!-- lamejs: free MP3 encoder (browsers can't make MP3 files on their own) -->
+  <script src="https://cdn.jsdelivr.net/npm/lamejs@1.2.1/lame.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

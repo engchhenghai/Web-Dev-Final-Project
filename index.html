@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8BitMusicPlayer - Main Menu</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="initMenuPage()">
+  <header>
+    <h1>8BitMusicPlayer</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Main Menu</a></li>
+        <li><a href="drums.html">Drums</a></li>
+        <li><a href="guitar.html">Guitar</a></li>
+        <li><a href="piano.html">Piano</a></li>
+        <li><a href="bass.html">Bass</a></li>
+        <li><a href="mixer.html">Mixer</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="menu-box">
+      <img src="assets/logo.png" alt="8BitMusicPlayer Retro Logo">
+      <h2>MAKE YOUR OWN BEAT GAME</h2>
+      <p>Write loops on 4 instruments using the piano roll and mix them together!</p>
+      <a href="drums.html" class="play-game-btn">PRESS PLAY</a>
+
+      <div class="menu-grid">
+        <article class="menu-card">
+          <h3>How to Play</h3>
+          <ol>
+            <li>Press PLAY to start at the Drums page.</li>
+            <li>Click the grid boxes to add green notes.</li>
+            <li>Visit Guitar, Piano, and Bass to layer sounds.</li>
+            <li>Open the Mixer page to play everything together.</li>
+          </ol>
+          <p>Sample Preview Sound:</p>
+          <audio controls src="assets/preview.wav"></audio>
+        </article>
+
+        <article class="menu-card">
+          <h3>Game Settings</h3>
+          <form id="settingsForm">
+            <fieldset>
+              <legend>Track Setup</legend>
+              <div class="form-row">
+                <label for="songName">Song Title:</label>
+                <input type="text" id="songName" name="songName" value="My First Beat" required>
+              </div>
+              <div class="form-row">
+                <label for="bpmInput">Tempo (BPM):</label>
+                <input type="number" id="bpmInput" name="bpmInput" min="60" max="200" value="120" required>
+              </div>
+              <button type="submit">Save Settings</button>
+              <p id="saveMsg"></p>
+            </fieldset>
+          </form>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>INFO 250 Final Project - 8BitMusicPlayer Game</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #18181c;
+  color: #eeeeee;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1rem;
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #25252b;
+  border-bottom: 3px solid #9be63c;
+  padding: 1rem 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1.3rem;
+  color: #9be63c;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+nav a:link {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  border: 2px solid #44444e;
+  background-color: #2f2f38;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+nav a:visited {
+  color: #cccccc;
+}
+
+nav a:hover {
+  background-color: #9be63c;
+  color: #18181c;
+  border-color: #9be63c;
+}
+
+nav a:active {
+  background-color: #6ea825;
+  color: #ffffff;
+}
+
+main {
+  flex: 1;
+  width: 94%;
+  max-width: 1200px;
+  margin: 1.5rem auto;
+}
+
+.menu-box {
+  background-color: #222228;
+  border: 3px solid #3c3c46;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.menu-box img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  border: 2px solid #9be63c;
+}
+
+.menu-box h2 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.play-game-btn {
+  display: inline-block;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1.2rem;
+  background-color: #9be63c;
+  color: #18181c;
+  padding: 1rem 2.5rem;
+  margin: 1.2rem 0;
+  border: 4px solid #ffffff;
+  text-decoration: none;
+  border-radius: 6px;
+  animation: pulseBtn 1.5s infinite;
+  transition: transform 0.15s;
+}
+
+.play-game-btn:hover {
+  transform: scale(1.06);
+  background-color: #b4f55b;
+}
+
+@keyframes pulseBtn {
+  0% { box-shadow: 0 0 0 0 rgba(155, 230, 60, 0.7); }
+  70% { box-shadow: 0 0 0 12px rgba(155, 230, 60, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(155, 230, 60, 0); }
+}
+
+.menu-grid {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  text-align: left;
+  flex-wrap: wrap;
+}
+
+.menu-card {
+  flex: 1;
+  min-width: 260px;
+  background-color: #2a2a32;
+  border: 2px solid #3f3f4a;
+  padding: 1.2rem;
+  border-radius: 6px;
+}
+
+.menu-card h3 {
+  color: #9be63c;
+  margin-bottom: 0.7rem;
+  font-size: 1rem;
+}
+
+.menu-card ol, .menu-card ul {
+  margin-left: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+audio {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+form fieldset {
+  border: 2px solid #4d4d59;
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: #202026;
+}
+
+form legend {
+  color: #9be63c;
+  font-weight: bold;
+  padding: 0 0.5rem;
+}
+
+.form-row {
+  margin-bottom: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+input[type="text"], input[type="number"], select {
+  padding: 0.45rem;
+  background-color: #141418;
+  color: #ffffff;
+  border: 1px solid #555562;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+button, .btn {
+  background-color: #3a3a45;
+  color: #ffffff;
+  border: 2px solid #666675;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+button:hover, .btn:hover {
+  background-color: #9be63c;
+  color: #18181c;
+  border-color: #9be63c;
+}
+
+.daw-top-bar {
+  background-color: #2b2b30;
+  border: 2px solid #44444c;
+  padding: 0.6rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.daw-controls {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.daw-status {
+  background-color: #141418;
+  border: 1px solid #44444c;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.85rem;
+  color: #9be63c;
+}
+
+.daw-container {
+  display: flex;
+  border: 2px solid #44444c;
+  background-color: #1e1e22;
+  min-height: 400px;
+}
+
+.daw-sidebar {
+  width: 210px;
+  background-color: #2a2a30;
+  border-right: 2px solid #44444c;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.daw-sidebar h2 {
+  font-size: 1rem;
+  color: #9be63c;
+  border-bottom: 1px solid #44444c;
+  padding-bottom: 0.4rem;
+}
+
+.sidebar-box label {
+  display: block;
+}
+
+.sidebar-box {
+  background-color: #222227;
+  border: 1px solid #3d3d46;
+  padding: 0.6rem;
+  font-size: 0.85rem;
+}
+
+.piano-roll-area {
+  flex: 1;
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.step-header {
+  display: grid;
+  grid-template-columns: 75px repeat(16, minmax(34px, 1fr));
+  background-color: #2f2f36;
+  border-bottom: 2px solid #44444c;
+  font-size: 0.75rem;
+  text-align: center;
+  color: #aaaaaa;
+}
+
+.step-header div {
+  padding: 0.35rem 0;
+  border-right: 1px solid #3c3c44;
+}
+
+.piano-roll-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.roll-row {
+  display: grid;
+  grid-template-columns: 75px repeat(16, minmax(34px, 1fr));
+  border-bottom: 1px solid #2d2d33;
+}
+
+.piano-key {
+  background-color: #f0f0f0;
+  color: #111111;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 0.45rem 0.4rem;
+  border-right: 2px solid #111111;
+  border-bottom: 1px solid #bbbbbb;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.piano-key.black-key {
+  background-color: #222222;
+  color: #eeeeee;
+}
+
+.grid-cell {
+  background-color: #232328;
+  border-right: 1px solid #2f2f36;
+  height: 32px;
+  cursor: pointer;
+  transition: background-color 0.1s;
+}
+
+.grid-cell.beat-start {
+  border-left: 2px solid #4a4a55;
+}
+
+/* Columns that new notes can't land on at the current quantize setting */
+.grid-cell.off-grid {
+  background-color: #1a1a1e;
+}
+
+.grid-cell:hover {
+  background-color: #35353d;
+}
+
+.grid-cell.active {
+  background-color: #9be63c;
+  border: 1px solid #d4ff94;
+}
+
+.grid-cell.playing {
+  outline: 2px solid #ffffff;
+}
+
+.mixer-tracks {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.mixer-track-card {
+  background-color: #24242a;
+  border: 2px solid #44444e;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.mixer-track-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Mute / Vol / Edit sit in a row and wrap neatly on small screens */
+.mixer-track-header div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.mixer-track-header input[type="range"] {
+  vertical-align: middle;
+  max-width: 7rem;
+}
+
+.mini-roll {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  gap: 2px;
+  background-color: #16161a;
+  padding: 0.4rem;
+  border: 1px solid #3c3c46;
+}
+
+.mini-step {
+  height: 22px;
+  background-color: #2b2b33;
+}
+
+.mini-step.has-note {
+  background-color: #9be63c;
+}
+
+.mini-step.playing {
+  background-color: #ffffff;
+}
+
+.track-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background-color: #222228;
+}
+
+.track-table th, .track-table td {
+  border: 1px solid #44444e;
+  padding: 0.7rem;
+  text-align: left;
+}
+
+.track-table th {
+  background-color: #2f2f38;
+  color: #9be63c;
+}
+
+.track-table tr:nth-child(even) {
+  background-color: #27272e;
+}
+
+footer {
+  background-color: #25252b;
+  border-top: 2px solid #3c3c46;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  color: #aaaaaa;
+  margin-top: auto;
+}
+
+@media (max-width: 900px) {
+  .daw-container {
+    flex-direction: column;
+  }
+  .daw-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 2px solid #44444c;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  header {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1rem;
+  }
+  .play-game-btn {
+    font-size: 0.95rem;
+    padding: 0.8rem 1.5rem;
+  }
+  nav ul {
+    justify-content: center;
+  }
+  .track-table th, .track-table td {
+    padding: 0.4rem;
+    font-size: 0.8rem;
+  }
+}
+
+.daw-status input[type="range"] {
+  width: 110px;
+  vertical-align: middle;
+  margin: 0 0.4rem;
+}
+
+.export-bar {
+  background-color: #2b2b30;
+  border: 2px solid #44444c;
+  padding: 0.6rem 1rem;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.export-bar h3 {
+  margin: 0;
+  color: #9be63c;
+}
+
+#exportMsg {
+  font-size: 0.85rem;
+  color: #9be63c;
+}
